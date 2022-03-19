@@ -1,7 +1,7 @@
 import { Routes, Route} from 'react-router-dom'
 
 //* import components
-import Login from '../containers/Login'
+import Login from '../pages/Login'
 import RecoveryPassword from '../containers/recoveryPassword'
 import Home from '../pages/Home'
 import NotFound from '../pages/NotFound'
