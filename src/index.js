@@ -8,10 +8,15 @@ import App from './App';
 //* import styles
 import {Global} from './config/globalsStyles'
 
+//* Import router
+import { BrowserRouter } from "react-router-dom";
+
 ReactDOM.render(
   <React.StrictMode>
+    <BrowserRouter>
     <Global/>
     <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -60,6 +60,14 @@ export const Container = styled.div`
                     margin-bottom: 30px;
                 }
             }
+
+            a {
+                color: var(--hospital-green);
+                font-size: var(--sm);
+                text-align: center;
+                text-decoration: none;
+                margin-bottom: 52px;
+            }
         }
 
         button {

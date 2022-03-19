@@ -1,13 +1,17 @@
 //* import components
 import Layout from "./containers/Layout";
-import RecoveryPassword from "./containers/recoveryPassword"
+
+//* import router
+import Router from "./routes";
 
 
 const App = () => {
   return (
+    <>
     <Layout>
-      <RecoveryPassword/>
+      <Router/>
     </Layout>
+    </>
   );
 }
 
