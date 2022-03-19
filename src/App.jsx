@@ -1,7 +1,13 @@
+//* import components
+import Layout from "./containers/Layout";
+import RecoveryPassword from "./containers/recoveryPassword"
 
-function App() {
+
+const App = () => {
   return (
-   <h1>App</h1>
+    <Layout>
+      <RecoveryPassword/>
+    </Layout>
   );
 }
 
