@@ -1,26 +1,25 @@
 //* import styles
-import { Container } from './styles'
+import { Container } from "./styles"
 
 const MyAccount = () => {
-
-    return (
-        <Container >
+    return(
+        <Container>
             <div >
                 <h1 >My account</h1>
 
                 <form action="/" >
                     <div>
                         <label for="name" >Name</label>
-                        <input type="text" id="name" placeholder="Teff" />
+                        <p >Camila Yokoo</p>
 
-                        <label for="email" class="label">Email</label>
-                        <input type="text" id="email" placeholder="platzi@example.com" />
+                        <label for="email" >Email</label>
+                        <p class="value">camilayokoo@gmail.com</p>
 
                         <label for="password" class="label">Password</label>
-                        <input type="password" id="password" placeholder="*********" />
+                        <p >*********</p>
                     </div>
 
-                    <input type="submit" value="Create" />
+                    <input type="submit" value="Edit" />
                 </form>
             </div>
         </Container>
