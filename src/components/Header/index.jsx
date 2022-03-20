@@ -6,18 +6,23 @@ import ImgCar from 'assets/icons/icon_shopping_cart.svg'
 import { Container } from './styles.js'
 //* import router
 import { Link } from 'react-router-dom'
+//* import components
 import Menushop from './_components/MenuShop/index.jsx'
+import Myorder from 'containers/MyOrder'
 //* import hooks
 import { useState, useContext } from 'react'
 import AddContext from 'context/AppContext'
 
 const Header = () => {
     const [ toggle, setToggle] = useState(false)
-
+    const [ toggleOrders, setToggleOrders] = useState(false)
     const { state } = useContext(AddContext)
 
     const handleToggle = () => {
         setToggle(!toggle)
+    }
+    const handleToggleOrder = () => {
+        setToggleOrders(!toggleOrders)
     }
     console.log(toggle)
     return (
@@ -54,7 +59,7 @@ const Header = () => {
                 <div >
                 <ul>
                     <li onClick={handleToggle}>platzi@example.com</li>
-                    <li >
+                    <li onClick={handleToggleOrder}>
                     <img src={ImgCar} alt="shopping cart"/>
                     {state.cart?.length > 0 ? <div>{state.cart.length}</div> : null}
                     </li>
@@ -63,6 +68,7 @@ const Header = () => {
             </nav>
         </Container>
                 <Menushop toggle={toggle}/>
+                <Myorder toggle={toggleOrders}/>
         </>
     )
 }

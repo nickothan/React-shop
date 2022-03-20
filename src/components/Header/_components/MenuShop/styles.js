@@ -4,9 +4,9 @@ export const Container = styled.div`
 position: relative;
 right: 0;
 width: 100%;
-background-color: red;
 `
 export const Content = styled.div`
+background-color: var(--white);
     overflow: hidden;
     z-index: 4;
     position: absolute;
@@ -14,7 +14,7 @@ export const Content = styled.div`
     right:${({toggle}) => toggle  ?  "15px": "0"};
     width: ${({toggle}) => toggle  ? "100px": "0" };
     height: auto;
-    border: 1px solid var(--very-light-pink);
+    border: ${({toggle}) => toggle  ? "1px": "0"} solid var(--very-light-pink);
     border-radius: 6px;
     transition: .6s all ease-in-out;
     

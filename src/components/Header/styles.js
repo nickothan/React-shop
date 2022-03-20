@@ -32,6 +32,8 @@ export const Container = styled.header`
 
                 li {
 
+                    cursor: pointer;
+
                     a {
                         text-decoration: none;
                         color: var(--very-light-pink);
