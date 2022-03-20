@@ -2,17 +2,19 @@
 import BarMenu from 'assets/icons/icon_menu.svg'
 import ImgLogo from 'assets/logos/logo_yard_sale.svg'
 import ImgCar from 'assets/icons/icon_shopping_cart.svg'
-import { useState } from 'react'
-
 //* import styles
 import { Container } from './styles.js'
-
 //* import router
 import { Link } from 'react-router-dom'
 import Menushop from './_components/MenuShop/index.jsx'
+//* import hooks
+import { useState, useContext } from 'react'
+import AddContext from 'context/AppContext'
 
 const Header = () => {
     const [ toggle, setToggle] = useState(false)
+
+    const { state } = useContext(AddContext)
 
     const handleToggle = () => {
         setToggle(!toggle)
@@ -54,7 +56,7 @@ const Header = () => {
                     <li onClick={handleToggle}>platzi@example.com</li>
                     <li >
                     <img src={ImgCar} alt="shopping cart"/>
-                    <div>2</div>
+                    {state.cart?.length > 0 ? <div>{state.cart.length}</div> : null}
                     </li>
                 </ul>
                 </div>
