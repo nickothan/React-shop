@@ -1,8 +1,8 @@
 //* import styles 
 import { container } from './styles'
 //* import assets
-import CartPlus from '../../../assets/icons/bt_add_to_cart.svg'
-import Close from '../../../assets/logo/icon_close.png'
+import CartPlus from 'assets/icons/bt_add_to_cart.svg'
+import Close from 'assets/logo/icon_close.png'
 
 const ProductItem = () => {
     return(

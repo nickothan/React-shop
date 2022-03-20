@@ -1,11 +1,23 @@
 import styled from 'styled-components/macro'
 
 export const Container = styled.div`
-    padding: 20px 20px 0 20px;
-    width: 100px;
+position: relative;
+right: 0;
+width: 100%;
+background-color: red;
+`
+export const Content = styled.div`
+    overflow: hidden;
+    z-index: 4;
+    position: absolute;
+    padding: ${({toggle}) => toggle  ? "20px 20px 0 20px": "0"};
+    right:${({toggle}) => toggle  ?  "15px": "0"};
+    width: ${({toggle}) => toggle  ? "100px": "0" };
     height: auto;
     border: 1px solid var(--very-light-pink);
     border-radius: 6px;
+    transition: .6s all ease-in-out;
+    
 
     ul {
         list-style: none;

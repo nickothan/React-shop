@@ -2,7 +2,7 @@ import { Routes, Route} from 'react-router-dom'
 
 //* import components
 import Login from '../pages/Login'
-import RecoveryPassword from '../pages/NewPasswordd'
+import RecoveryPassword from '../pages/RecoveryPassword'
 import Home from '../pages/Home'
 import NotFound from '../pages/NotFound'
 import Checkout from '../pages/Checkout'
@@ -18,10 +18,10 @@ const Router = () => {
             <Route exact path="/" element={<Home/>}/>
             <Route exact path="/login" element={<Login/>}/>
             <Route exact path="/Checkout" element={<Checkout/>}/>
-            <Route exact path="/CreateAccount" element={<CreateAccount/>}/>
-            <Route exact path="/MyAccount" element={<MyAccount/>}/>
-            <Route exact path="/NewPassword" element={<NewPassword/>}/>
-            <Route exact path="/SendEmail" element={<SendEmail/>}/>
+            <Route exact path="/create-account" element={<CreateAccount/>}/>
+            <Route exact path="/my-account" element={<MyAccount/>}/>
+            <Route exact path="/new-password" element={<NewPassword/>}/>
+            <Route exact path="/send-email" element={<SendEmail/>}/>
             <Route exact path="/Orders" element={<Orders/>}/>
             <Route exact path="/recovery-password" element={<RecoveryPassword/>}/>
 

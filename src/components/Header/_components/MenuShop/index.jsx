@@ -1,9 +1,12 @@
 //* import styles 
-import { Container } from "./styles"
+import { Container, Content } from "./styles"
 
-const Menushop = () => {
+const Menushop = ({toggle}) => {
+    
     return(
-        <Container >
+        <Container toggle={toggle} >
+            <Content toggle={toggle}>
+
             <ul>
             <li>
                 <a href="/" >My orders</a>
@@ -17,6 +20,7 @@ const Menushop = () => {
                 <a href="/">Sign out</a>
             </li>
             </ul>
+            </Content>
         </Container>
     )
 }

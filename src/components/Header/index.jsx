@@ -1,16 +1,25 @@
 //* import assets
-import BarMenu from '../../assets/icons/icon_menu.svg'
-import ImgLogo from '../../assets/logos/logo_yard_sale.svg'
-import ImgCar from '../../assets/icons/icon_shopping_cart.svg'
+import BarMenu from 'assets/icons/icon_menu.svg'
+import ImgLogo from 'assets/logos/logo_yard_sale.svg'
+import ImgCar from 'assets/icons/icon_shopping_cart.svg'
+import { useState } from 'react'
 
 //* import styles
 import { Container } from './styles.js'
 
 //* import router
 import { Link } from 'react-router-dom'
+import Menushop from './_components/MenuShop/index.jsx'
 
 const Header = () => {
+    const [ toggle, setToggle] = useState(false)
+
+    const handleToggle = () => {
+        setToggle(!toggle)
+    }
+    console.log(toggle)
     return (
+            <>
         <Container>
             <nav>
                 <img src={BarMenu} alt="menu" />
@@ -42,7 +51,7 @@ const Header = () => {
 
                 <div >
                 <ul>
-                    <li >platzi@example.com</li>
+                    <li onClick={handleToggle}>platzi@example.com</li>
                     <li >
                     <img src={ImgCar} alt="shopping cart"/>
                     <div>2</div>
@@ -51,6 +60,8 @@ const Header = () => {
                 </div>
             </nav>
         </Container>
+                <Menushop toggle={toggle}/>
+        </>
     )
 }
 
