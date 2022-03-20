@@ -45,7 +45,8 @@ export const Container = styled.div`
                     margin-bottom: 22px;
                 }
 
-                &[type=submit]{
+            }
+                button {
                     background-color: var(--hospital-green);
                     border-radius: 8px;
                     border: none;
@@ -59,7 +60,6 @@ export const Container = styled.div`
                     margin-top: 14px;
                     margin-bottom: 30px;
                 }
-            }
 
             a {
                 color: var(--hospital-green);

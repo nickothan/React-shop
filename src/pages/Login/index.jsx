@@ -1,3 +1,5 @@
+import { useRef } from 'react'
+
 //* import styles
 import { Container } from './styles'
 
@@ -5,19 +7,32 @@ import { Container } from './styles'
 import Img from '../../assets/logos/logo_yard_sale.svg'
 
 const Login = () => {
+    const form = useRef(null)
+
+    const handleSubmit = (event ) => {
+        event.preventDefault();
+        const formData = new FormData(form.current)
+        const data = {
+            username: formData.get('email'),
+            password: formData.get('password')
+        }
+
+        console.log("::data:: ",data)
+    }
+
     return(
         <Container>
             <div >
                 <img src={Img} alt="logo" />
 
-                <form action="/" >
+                <form action="" ref={form} >
                     <label htmlFor="email" >Email address</label>
-                    <input type="text" id="email" placeholder="platzi@example.cm"  />
+                    <input type="text" name="email" placeholder="platzi@example.cm"  />
 
                     <label htmlFor="password" >Password</label>
-                    <input type="password" id="password" placeholder="*********"  />
+                    <input type="password" name="password" placeholder="*********"  />
 
-                    <input type="submit" value="Log in"  />
+                    <button   onClick={handleSubmit}  >Log in</button>
                     <a href="/">Forgot my password</a>
                 </form>
 

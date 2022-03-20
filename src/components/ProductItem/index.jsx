@@ -5,10 +5,10 @@ import AddCart from 'assets/icons/bt_add_to_cart.svg'
 
 
 const ProductItem = ({item}) => {
-    console.log(":: item ::", item)
+    
     return ( 
     <Container >
-        <img src={item.images[0]} alt={item.title}/>
+        <img src={item.images[0]} alt={item.ti}/>
         <div >
             <div>
                 <p>$ {item.price},00</p>
