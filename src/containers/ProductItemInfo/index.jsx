@@ -1,12 +1,12 @@
 //* import styles 
-import { container } from './styles'
+import { Container } from './styles'
 //* import assets
 import CartPlus from 'assets/icons/bt_add_to_cart.svg'
-import Close from 'assets/logo/icon_close.png'
+import Close from 'assets/icons/icon_close.png'
 
 const ProductItem = () => {
     return(
-        <aside >
+        <Container >
             <div >
                 <img src={Close} alt="close"/>
             </div>
@@ -20,7 +20,7 @@ const ProductItem = () => {
                     Add to cart
                 </button>
             </div>
-        </aside>
+        </Container>
     )
 }
 

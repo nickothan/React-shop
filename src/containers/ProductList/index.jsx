@@ -1,29 +1,28 @@
-
+import { useEffect, useState } from "react";
 //* import styles
 import { Container } from "./styles";
-//* import assets
-import AddCart from 'assets/icons/bt_add_to_cart.svg'
+//*import components
+import ProductItem from "components/ProductItem";
 
-const ItemsShop = () => {
+
+const ProductList = () => {
+    const [products, setProducts] = useState([])
+
+    useEffect(() => {
+        fetch('http://api.escuelajs.co/api/v1/products')
+        .then(res => res.json())
+        .then(data => {setProducts(data)})
+    }, [])
+
     return(
         <Container >
             <ul >
-        
-            <li >
-                <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""/>
-                <div >
-                    <div>
-                        <p>$120,00</p>
-                        <p>Bike</p>
-                    </div>
-                    <figure >
-                        <img src={AddCart} alt=""/>
-                    </figure>
-                </div>
-            </li>
+                {products.map((item) => 
+                    <ProductItem key={item.id} item={item} />
+                )}
             </ul>
         </Container>
     )
 }
 
-export default ItemsShop
+export default ProductList
