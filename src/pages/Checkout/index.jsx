@@ -54,3 +54,5 @@ const Checkout = () => {
         </Container>
     )
 }
+
+export default Checkout

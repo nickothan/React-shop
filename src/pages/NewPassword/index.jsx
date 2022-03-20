@@ -6,7 +6,7 @@ import { Container, Content } from './styles'
 //* import Assets
 import Img from '../../assets/logos/logo_yard_sale.svg'
 
-const RecoveryPassword = () => {
+const NewPassword = () => {
     return(
     <Container>
         <Content>
@@ -29,4 +29,4 @@ const RecoveryPassword = () => {
     )
 }
 
-export default RecoveryPassword
+export default NewPassword
