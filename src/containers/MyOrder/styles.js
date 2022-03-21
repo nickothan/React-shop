@@ -1,13 +1,14 @@
 import styled from 'styled-components/macro'
 
 export const Container = styled.div`
-    overflow: hidden;
+    overflow: ${({toggle}) => toggle ? "scroll": "hidden"};
     position: absolute;
+    box-sizing: border-box;
     right: 0;
     width: ${({toggle}) => toggle ? "100%": "0"};
     height: ${({toggle}) => toggle ? "100%": "0"};
     
-    padding-bottom: 50px;;
+    padding: ${({toggle}) => toggle ? "50px": "0"};
     display: grid;
     place-items: center;
     background-color: #000000c4;
@@ -17,8 +18,8 @@ export const Container = styled.div`
         
         display: grid;
         grid-template-rows: auto 1fr auto;
-        padding: 24px;
-        width: 300px;
+        padding: 25px;
+        max-width: 350px;
         background-color: var(--white);
 
         h1 {
@@ -31,36 +32,9 @@ export const Container = styled.div`
             flex-direction: column;
             
             li {
-                list-style: none;
-                display: grid;
-                grid-template-columns: auto 1fr auto auto;
-                gap: 16px;
-                margin-bottom: 24px;
-                align-items: center;
+                
 
-                figure {
-                    margin: 0;
-                    
-                    img {
-                        width: 70px;
-                        height: 70px;
-                        border-radius: 20px;
-                        object-fit: cover;
-                    }
-                }
-
-                p{
-                    &:nth-child(1) {
-                        font-size: var(--md);
-                        font-weight: bold;
-                    }
-
-                    &:nth-child(2) {
-                        color: var(--very-light-pink);
-                    }
-                }
-
-                &:nth-child(1){
+                &:last-child{
 
                     display: grid;
                     grid-template-columns: auto 1fr;
